@@ -1,0 +1,16 @@
+{
+  "name": "@4rk/vue-components-loader",
+  "version": "0.1.0",
+  "main": "src/index.js",
+  "author": "Fork Unstable Media GmbH <obj@fork.de>",
+  "license": "MIT",
+  "dependencies": {
+    "glob": "^7.1.6",
+    "loader-utils": "^2.0.0",
+    "schema-utils": "^2.6.6"
+  },
+  "peerDependencies": {
+    "vue-template-compiler": "^2.6.11",
+    "webpack": "^4.43.0"
+  }
+}
