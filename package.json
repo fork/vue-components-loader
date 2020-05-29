@@ -1,9 +1,25 @@
 {
   "name": "@4rk/vue-components-loader",
-  "version": "0.1.0",
-  "main": "src/index.js",
-  "author": "Fork Unstable Media GmbH <obj@fork.de>",
+  "version": "1.0.0",
+  "description": "A webpack loader for treeshaking and auto importing Vue components.",
+  "keywords": [
+    "vue",
+    "vuejs",
+    "components",
+    "webpack",
+    "loader"
+  ],
   "license": "MIT",
+  "author": "Fork Unstable Media GmbH <obj@fork.de>",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fork/vue-components-loader.git"
+  },
+  "scripts": {
+    "preversion": "kacl prerelease",
+    "version": "kacl release && prettier --write CHANGELOG.md && git add CHANGELOG.md"
+  },
   "dependencies": {
     "glob": "^7.1.6",
     "loader-utils": "^2.0.0",
@@ -12,5 +28,21 @@
   "peerDependencies": {
     "vue-template-compiler": "^2.6.11",
     "webpack": "^4.43.0"
+  },
+  "devDependencies": {
+    "@brightcove/kacl": "^0.1.8",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.7",
+    "prettier": "^2.0.5"
+  },
+  "lint-staged": {
+    "*.{js,md}": [
+      "prettier --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
